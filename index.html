@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="./fonts/TTFirsNeue-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/TTFirsNeue-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./css/style.min.css"> <!--для разработки и для build-версии -->
+  <title>High pass</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <img class="header__logo" src="./image/1920/logo.svg" alt="Логотип">
+      
+      <nav class="header__nav header__nav--top">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">О студии</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Наши проекты</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Услуги</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Мастер-классы</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="header__social-list">
+        <li class="header__social-item">
+          <a class="header__social-link" href="#" aria-label="Ссылка на соц. сети">
+            <svg class="header__social-svg">
+              <use xlink:href="./image/sprite.svg#1920--instagram" />
+            </svg>
+          </a>
+        </li>
+        <li class="header__social-item">
+          <a class="header__social-link" href="#" aria-label="Ссылка на соц. сети">
+            <svg class="header__social-svg">
+              <use xlink:href="./image/sprite.svg#1920--fb" />
+            </svg>
+          </a>
+        </li>
+        <li class="header__social-item">
+          <a class="header__social-link" href="#" aria-label="Ссылка на соц. сети">
+            <svg class="header__social-svg">
+              <use xlink:href="./image/sprite.svg#1920--vk" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <form class="header__form">
+        <button class="header__form-button">
+          <svg class="header__search">
+            <use xlink:href="./image/sprite.svg#1024--search" />
+          </svg>
+        </button>
+        <input class="header__form-input" type="text">
+      </form>
+    </div>
+    <div class="header__bottom">
+      <div class="container header__container--bottom">
+        <button class="header__burger" id="burger">
+          <svg class="header__burger-svg">
+            <use xlink:href="./image/sprite.svg#1920--burger" />
+          </svg>
+        </button>
+        <nav class="header__nav header__nav--bottom" id="nav-bottom">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">О студии</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Наши проекты</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Услуги</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Мастер-классы</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="visually-hidden">High pass</h1>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="newmaster hero__newmaster">
+          <a class="hashtag hero__hashtag" href="#">#мастеркласс</a>
+          <p class="description hero__description">Мастер-класс от Игоря Робова</p>
+          <h2 class="title hero__title--newmaster">Неоновый фотосет&nbsp;2.0 7&nbsp;июля 20:00</h2>
+          <a class="link hero__link" href="#">Узнать больше</a>
+        </div>
+        <div class="hero__oldmaster hero__oldmaster--1">
+          <h2 class="title hero__title--oldmaster">Работы участников предыдущего мастер-класса</h2>
+          <picture>
+            <source media="(min-width: 1100px)"  type="image/jpg" srcset="./image/1920/hero/Rectangle-4.jpg">
+            <source media="(min-width: 951px) and (max-width: 1099px)" type="image/jpg" srcset="./image/1024/hero/Rectangle-4.jpg">
+            <source media="(min-width: 601px) and (max-width: 950px)" type="image/jpg" srcset="./image/768/hero/Rectangle-4.jpg">
+            <img class="hero__image" src="./image/320/hero/Rectangle-4.jpg" alt="Работа участника">
+          </picture>
+        </div>
+        <div class="hero__oldmaster hero__oldmaster--2">
+          <picture>
+            <source media="(min-width: 1100px)"  type="image/jpg" srcset="./image/1920/hero/Rectangle-6.jpg">
+            <source media="(min-width: 951px) and (max-width: 1099px)" type="image/jpg" srcset="./image/1024/hero/Rectangle-6.jpg">
+            <source media="(min-width: 601px) and (max-width: 950px)" type="image/jpg" srcset="./image/768/hero/Rectangle-6.jpg">
+            <img class="hero__image" src="./image/320/hero/Rectangle-6.jpg" alt="Работа участника">
+          </picture>
+        </div>
+        <div class="hero__oldmaster hero__oldmaster--3">
+          <picture>
+            <source media="(min-width: 1100px)"  type="image/jpg" srcset="./image/1920/hero/Rectangle-3.jpg">
+            <source media="(min-width: 951px) and (max-width: 1099px)" type="image/jpg" srcset="./image/1024/hero/Rectangle-3.jpg">
+            <source media="(min-width: 601px) and (max-width: 950px)" type="image/jpg" srcset="./image/768/hero/Rectangle-3.jpg">
+            <img class="hero__image" src="./image/320/hero/Rectangle-3.jpg" alt="Работа участника">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container about__container">
+        <h2 class="title about__title">О студии</h2>
+
+        <div class="about__grid">
+          <p class="description about__description">В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий  фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-&nbsp;технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.</p>
+
+          <div class="about__subscribing">
+            <h2 class="title about__title--subscribing">Подписаться на рассылку</h2>
+            <form class="form about__form" id="form-1">
+              <div class="input-wrapper about__input-wrapper">
+                <input class="about__input" type="email" name="mail" id="email-1" placeholder="E-mail">
+              </div>
+              <button class="button about__button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container projects__container">
+        <h2 class="title projects__title">Наши проекты</h2>
+        <ul class="projects__list-grid">
+          <li class="projects__item projects__item--1">
+            <article class="projects__card projects__card--1">
+              <h3 class="visually-hidden">Пейзаж</h3>
+              <a href="#" class="hashtag">#пейзаж</a>
+              <picture>
+                <source media="(min-width: 1100px)"  type="image/jpg" srcset="./image/1920/projects/Rectangle-1.jpg">
+                <source media="(min-width: 951px) and (max-width: 1099px)" type="image/jpg" srcset="./image/1024/projects/Rectangle-1.jpg">
+                <source media="(min-width: 601px) and (max-width: 950px)" type="image/jpg" srcset="./image/768/projects/Rectangle-1.jpg">
+                <img class="projects__image" src="./image/320/projects/Rectangle-1.jpg" alt="Работа участника">
+              </picture>
+              <p class="description projects__description" id="descr-1">Синтетически, смешаны с не уникальными данными до степени...</p>
+              <span class="projects__span">16 июня</span>
+            </article>
+          </li>
+          <li class="projects__item projects__item--2">
+            <article class="projects__card projects__card--2">
+              <h3 class="visually-hidden">Портрет</h3>
+              <a href="#" class="hashtag">#портрет</a>
+              <picture>
+                <source media="(min-width: 1100px)"  type="image/jpg" srcset="./image/1920/projects/Rectangle-2.jpg">
+                <source media="(min-width: 951px) and (max-width: 1099px)" type="image/jpg" srcset="./image/1024/projects/Rectangle-2.jpg">
+                <source media="(min-width: 601px) and (max-width: 950px)" type="image/jpg" srcset="./image/768/projects/Rectangle-2.jpg">
+                <img class="projects__image" src="./image/320/projects/Rectangle-2.jpg" alt="Работа участника">
+              </picture>
+              <p class="description projects__description" id="descr-2">В своём стремлении улучшить опыт мы упускаем, что явные...</p>
+              <span class="projects__span">28 мая</span>
+            </article>
+          </li>
+          <li class="projects__item projects__item--3">
+            <article class="projects__card projects__card--3">
+              <h3 class="visually-hidden">Предмет</h3>
+              <a href="#" class="hashtag">#предмет</a>
+              <picture>
+                <source media="(min-width: 1100px)"  type="image/jpg" srcset="./image/1920/projects/Rectangle-3.jpg">
+                <source media="(min-width: 951px) and (max-width: 1099px)" type="image/jpg" srcset="./image/1024/projects/Rectangle-3.jpg">
+                <source media="(min-width: 601px) and (max-width: 950px)" type="image/jpg" srcset="./image/768/projects/Rectangle-3.jpg">
+                <img class="projects__image" src="./image/320/projects/Rectangle-3.jpg" alt="Работа участника">
+              </picture>
+              <p class="description projects__description" id="descr-3">Равным образом, высокое качество позиционных...</p>
+              <span class="projects__span">14 мая</span>
+            </article>
+          </li>
+          <li class="projects__item projects__item--4">
+            <article class="projects__card projects__card--4">
+              <a href="#" class="hashtag">#fuji</a>
+              <span class="projects__span projects__span--white">9 апреля</span>
+              <h3 class="title projects__title projects__title--white">Семантический разбор</h3>
+              <p class="description projects__description projects__description--white">В рамках спецификации современных стандартов, интерактивные прототипы</p>
+              <a href="#" class="link projects__link">О проекте</a>
+            </article>
+          </li>
+          <li class="projects__item projects__item--5">
+            <article class="projects__card projects__card--5">
+              <a href="#" class="hashtag">#проектзабвение</a>
+              <span class="projects__span projects__span--white">20 марта</span>
+              <h3 class="title projects__title projects__title--white">Забвение</h3>
+              <p class="description projects__description projects__description--white">Играет важную роль в формировании глубокомысленных рассуждений</p>
+              <a href="#" class="link projects__link">О проекте</a>
+            </article>
+          </li>
+          <li class="projects__item projects__item--6">
+            <article class="projects__card projects__card--6">
+              <h3 class="visually-hidden">Ретушь</h3>
+              <a href="#" class="hashtag">#ретушь</a>
+              <picture>
+                <source media="(min-width: 1100px)"  type="image/jpg" srcset="./image/1920/projects/Rectangle-6.jpg">
+                <source media="(min-width: 951px) and (max-width: 1099px)" type="image/jpg" srcset="./image/1024/projects/Rectangle-6.jpg">
+                <source media="(min-width: 601px) and (max-width: 950px)" type="image/jpg" srcset="./image/768/projects/Rectangle-6.jpg">
+                <img class="projects__image" src="./image/320/projects/Rectangle-6.jpg" alt="Работа участника">
+              </picture>
+              <p class="description projects__description">Как принято считать, многие известные личности и по сей день остаются уделом либералов...</p>
+              <span class="projects__span">9 марта</span>
+            </article>
+          </li>
+          <li class="projects__item projects__item--7">
+            <article class="projects__card projects__card--7">
+              <h3 class="visually-hidden">Портрет</h3>
+              <a href="#" class="hashtag">#портрет</a>
+              <picture>
+                <source media="(min-width: 1100px)"  type="image/jpg" srcset="./image/1920/projects/Rectangle-7.jpg">
+                <source media="(min-width: 951px) and (max-width: 1099px)" type="image/jpg" srcset="./image/1024/projects/Rectangle-7.jpg">
+                <source media="(min-width: 601px) and (max-width: 950px)" type="image/jpg" srcset="./image/768/projects/Rectangle-7.jpg">
+                <img class="projects__image" src="./image/320/projects/Rectangle-7.jpg" alt="Работа участника">
+              </picture>
+              <p class="description projects__description">С учётом сложившейся международной обстановки, новая модель организационной...</p>
+              <span class="projects__span">1 марта</span>
+            </article>
+          </li>   
+        </ul>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container contacts__container">
+        <h2 class="title contacts__title">Контакты</h2>
+        <div class="contacts__grid">
+          <div class="contacts__map-address">
+            <div class="contacts__map" id="map"></div>
+            <div class="contacts__address" id="address">
+              <button class="contacts__close" id="closeButton"></button>
+              <address class="contacts__info">
+                <h3 class="title contacts__info-title">Студия “High pass”</h3>
+                <p class="description contacts__info-descr">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82&nbsp;&nbsp;</p>
+                <a class="contacts__tel" href="tel:+749542423532">+7 (495) 42-423-532</a>
+              </address>
+            </div>
+          </div>
+          <div class="contacts__application">
+            <h3 class="title contacts__title-h3">Оставить заявку</h3>
+            <p class="description contacts__description">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия</p>
+            <form class="form contacts__form" id="form-2">
+              <div class="input-wrapper">
+                <input class="contacts__input" type="text" name="name" id="name-2" placeholder="Имя">
+              </div>
+              <div class="input-wrapper">
+                <input class="contacts__input" type="email" name="mail" id="email-2" placeholder="E-mail">
+              </div>
+              <div class="input-wrapper input-wrapper--textarea">
+                <textarea class="contacts__textarea" name="comments" id="comments-2" placeholder="Комментарий"></textarea>
+              </div>
+              <button class="button contacts__button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <img class="footer__logo" src="./image/1920/logo.svg" alt="Логотип">
+        <p class="description footer__description-left">Фотостудия High pass® 2018-2020</p>
+      </div>
+      <div class="footer__center">
+        <p class="description footer__description-center">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра.
+          <span class="footer__span">©&nbsp;Имоджен&nbsp;Каннингем</span></p>
+      </div>
+      <div class="footer__right">
+        <span class="footer__span footer__span--right">Больше интересного:</span>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="Ссылка на соц. сети">
+              <svg class="footer__social-svg">
+                <use xlink:href="./image/sprite.svg#1920--instagram" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="Ссылка на соц. сети">
+              <svg class="footer__social-svg">
+                <use xlink:href="./image/sprite.svg#1920--fb" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" aria-label="Ссылка на соц. сети">
+              <svg class="footer__social-svg">
+                <use xlink:href="./image/sprite.svg#1920--vk" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script> <!--плавный скроллинг страницы-->
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  
+  <script src="./js/index.min.js"></script> <!--для разработки и для build-версии-->
+</body>
+</html>
